@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Añadir un nuevo producto.</title>
+  </head>
+  <body>
+    <h1>Tienda Web V1.0</h1>
+    <h2>Añadir un nuevo producto.</h2>
+    <form name="insertar" action="insertarProducto.php" method="post">
+      <p>Código: <input type="number" name="cod"></p>
+      <p>Descripción: <input type="text" name="descripcion"></p>
+      <p>Precio: <input type="number" name="precio" step=".01"></p>
+      <input type="submit" name="add" value="Añadir">
+    </form>
+  </body>
+</html>

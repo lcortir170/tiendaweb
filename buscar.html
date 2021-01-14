@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Buscar producto.</title>
+  </head>
+  <body>
+    <h1>Tienda Web V1.0</h1>
+    <h2>Buscar producto.</h2>
+    <form name="buscar" action="buscarProductos.php" method="post">
+      <p>Búsqueda: <input type="text" name="busqueda"></p>
+      <p>Tipo de búsqueda:
+        <select name="tipoBusqueda">
+          <option name="cod" value="cod">Por código</option>
+          <option name="descripcion" value="descripcion">Por descripción</option>
+          <option name="precio" value="precio">Por precio</option>
+        </select>
+      </p>
+      <input type="submit" name="buscar" value="Buscar">
+    </form>
+  </body>
+</html>
