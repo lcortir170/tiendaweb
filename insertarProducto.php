@@ -5,9 +5,10 @@ $servername = "localhost";
 $username = "php";
 $password = "1234";
 $dbname = "pruebas";
-$codigo = $_POST["cod"];
-$descripcion = $_POST["descripcion"];
-$precio = $_POST["precio"];
+$fcod = $_POST["fcod"];
+$fdesc = $_POST["fdesc"];
+$fprecio = $_POST["fprecio"];
+$fstock = $_POST["fstock"];
 
 // Establecer conexión con la base de datos
 $conn = mysqli_connect($servername, $username, $password, $dbname);
@@ -18,8 +19,8 @@ if (!$conn) {
 }
 
 // Consulta para realizar inserción a la base de datos
-$sql = "INSERT INTO productos (cod, descripcion, precio)
-VALUES ('$codigo', '$descripcion', '$precio')";
+$sql = "INSERT INTO productos (cod, descripcion, precio, stock)
+VALUES ('$fcod', '$fdesc', '$fprecio', '$fstock')";
 
 $resultado = mysqli_query($conn, $sql);
 
