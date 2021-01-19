@@ -1,22 +1,64 @@
 <!DOCTYPE html>
-<html lang="es">
-  <head>
-    <meta charset="utf-8">
-    <title>Buscar producto.</title>
-  </head>
-  <body>
-    <h1>Tienda Web V1.0</h1>
-    <h2>Buscar producto.</h2>
-    <form name="buscar" action="buscarProductos.php" method="post">
-      <p>Búsqueda: <input type="text" name="busqueda"></p>
-      <p>Tipo de búsqueda:
-        <select name="tipoBusqueda">
-          <option name="cod" value="cod">Por código</option>
-          <option name="descripcion" value="descripcion">Por descripción</option>
-          <option name="precio" value="precio">Por precio</option>
-        </select>
-      </p>
-      <input type="submit" name="buscar" value="Buscar">
-    </form>
-  </body>
+<html>
+<meta charset="UTF-8">
+<head>
+  <title>Buscar</title>
+  <style>
+    html, body, .con {
+       height:100%;
+       margin:0;
+       padding:0;
+}
+    body {
+  background-image: url("fondo.jpeg");
+  object-fit: fill;
+  height: 100%;
+  background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+    h1 {
+        text-align: center;
+        color: #85D8EF;
+ 
+}
+    p {
+        text-align: right;
+    position:absolute;
+    bottom:5px;
+    right:1050      px;
+    }
+    div.button{
+        width: 33,3%;
+        margin-left: 50%;
+        transform: translate(-33%);
+        
+
+        
+        
+    }
+</style>
+</head>
+<body>
+<h1>Tienda Web V1.0</h1>
+
+<h2>Buscar producto</h2>
+
+<form action="buscarProductos.php">
+  
+ <label for="opcion">Opciones de búsqueda </label>
+<select id="opcion" name="opcion">
+  <option value="ocod" name="ocod">Por código</option>
+  <option value="odesc" name="odesc">Por descripción</option>
+  <option value="opre" name="opre">Por precio</option>
+</select>
+  <br>
+  <br>
+  <label for="fbus">Búsqueda:</label><br><br>
+  <input type="text" id="ftext" name="ftext"><br>
+  <br>
+  <input type="submit" value="Buscar">
+</form> 
+
+<p><a href="index.html">Volver al inicio</a></p>
+</body>
 </html>
