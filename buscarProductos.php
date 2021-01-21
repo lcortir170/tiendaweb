@@ -19,16 +19,16 @@ if (!$conn) {
 
 // Consulta para realizar la búsqueda en la base de datos
 switch ($tipoBusqueda){
-  case "cod":
+  case "ocod":
     $sql = $sql."cod = $busqueda;";
   break;
-  case "descripcion":
+  case "odesc":
     $sql = $sql."descripcion like '%$busqueda%';";
   break;
-  case "precio":
+  case "opre":
     $sql = $sql."precio <= $busqueda;";
   break;
-  case "stock":
+  case "ostock":
     $sql = $sql."stock <= $busqueda;";
   break;
   default:
