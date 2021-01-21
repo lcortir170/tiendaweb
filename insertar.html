@@ -26,14 +26,6 @@
     bottom:5px;
     right:1050      px;
     }
-    div.contenedor{
-
-
-        
-
-        
-        
-    }
 </style>
 	<title>Insertar</title>
 </head>
@@ -42,13 +34,15 @@
 <div=contenedor></div>
 <h2>Añadir un nuevo producto</h2>
 
-<form action="insertarProductos.php">
+<form action="insertarProductos.php" method="POST">
   <label for="fcod">Código:</label><br><br>
   <input type="text" id="fcod" name="fcod"><br><br>
   <label for="fdesc">Descripción:</label><br><br>
   <input type="text" id="fdesc" name="fdesc"><br><br>
   <label for="fprecio">Precio:</label><br><br>
   <input type="number" id="fprecio" name="fprecio"><br>
+  <label for="fstock">Stock:</label><br><br>
+  <input type="number" id="fstock" name="fstock"><br>
   <br><br>
   <input type="submit" value="Insertar">
 </form><br> 
