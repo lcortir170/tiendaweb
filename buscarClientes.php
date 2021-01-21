@@ -7,7 +7,7 @@ $password = "1234";
 $dbname = "pruebas";
 $busqueda = $_POST["ftext"];
 $tipoBusqueda = $_POST["opcion"];
-$sql = "SELECT * FROM productos WHERE ";
+$sql = "SELECT * FROM clientes WHERE ";
 
 // Establecer conexión con la base de datos
 $conn = mysqli_connect($servername, $username, $password, $dbname);
@@ -23,7 +23,7 @@ switch ($tipoBusqueda){
     $sql = $sql."nombre like '%$busqueda%';";
   break;
   case "oape":
-    $sql = $sql."apellido like '%$busqueda%';";
+    $sql = $sql."apellidos like '%$busqueda%';";
   break;
   case "omail":
     $sql = $sql."email like '%$busqueda%';";
