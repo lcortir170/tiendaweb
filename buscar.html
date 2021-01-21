@@ -39,17 +39,18 @@
 </style>
 </head>
 <body>
-<h1>Tienda Web V1.0</h1>
+<h1>Tienda Web V2.0</h1>
 
 <h2>Buscar producto</h2>
 
-<form action="buscarProductos.php">
+<form action="buscarProductos.php" method="POST">
   
  <label for="opcion">Opciones de búsqueda </label>
 <select id="opcion" name="opcion">
   <option value="ocod" name="ocod">Por código</option>
   <option value="odesc" name="odesc">Por descripción</option>
   <option value="opre" name="opre">Por precio</option>
+  <option value="ostock" name="ostock">Por stock</option>
 </select>
   <br>
   <br>
