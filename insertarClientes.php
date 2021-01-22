@@ -1,6 +1,6 @@
 <?php
 
-// Variables
+// Variables 
 $servername = "localhost";
 $username = "php";
 $password = "1234";
