@@ -24,3 +24,11 @@ Dani modifica los html y saca el css de ellos para ponerlo en un archivo aparte.
 modificación en el insertar.html, cambiar el nombre por insertar productos a insertar producto, tal y como en la paractica, Daniel se ha encargado de hacerlo. Luis Manuel se ha 
 encargado de cambiar el nombre del archivo php para que coincida con la variable modificada por Dani. Luismi termina de redactar el README.md y termina el archivo descripción.txt.
 Se han hecho los respectivos push y el proyecto está terminado.
+
+TIENDA WEB 3.0
+
+05/02/2021
+Para esta versión de la tienda Web nos hemos repartido el trabajo de la siguiente manera: Luis Manuel se ha encargado de los fichero de Productos (buscarProducto.php,
+insertarProducto.php y ha creado la clase Producto, que esta situada en el fichero Productos.php), Dani se ha encargado de modificar los ficheros de Cliente para que se envien
+los correos cada vez que un cliente se da de alta, Luismi y Fran han trabajado en equipo y se han encargado de hacer entre los dos la clase Cliente y su correspondiente insertar
+y buscar. El readme lo ha modificado Luismi y la descripción la ha modificado Fran. El push de los archivos de Cliente lo ha hecho Fran y el de los Productos Luis Manuel.
