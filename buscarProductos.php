@@ -1,7 +1,7 @@
 <?php
 
 //Llamada a la clase Producto
-require 'claseProducto.php';
+require 'productos.php';
 
 // Variables
 $servername = "localhost";
