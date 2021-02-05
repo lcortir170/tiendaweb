@@ -1,52 +1,33 @@
 <?php
 
+//Llamada a la clase Producto
+require 'claseProducto.php';
+
 // Variables
 $servername = "localhost";
 $username = "php";
 $password = "1234";
 $dbname = "pruebas";
-$busqueda = $_POST["ftext"];
-$tipoBusqueda = $_POST["opcion"];
-$sql = "SELECT * FROM productos WHERE ";
 
 // Establecer conexión con la base de datos
-$conn = mysqli_connect($servername, $username, $password, $dbname);
+$conn = new mysqli($servername, $username, $password, $dbname);
 
 // Verificar la conexión
-if (!$conn) {
-  die("Error de conexión: ".mysqli_connect_error());
+if ($conn->connect_error) {
+    die("Error de conexión: " . $conn->connect_error);
 }
 
-// Consulta para realizar la búsqueda en la base de datos
-switch ($tipoBusqueda){
-  case "ocod":
-    $sql = $sql."cod = $busqueda;";
-  break;
-  case "odesc":
-    $sql = $sql."descripcion like '%$busqueda%';";
-  break;
-  case "opre":
-    $sql = $sql."precio <= $busqueda;";
-  break;
-  case "ostock":
-    $sql = $sql."stock <= $busqueda;";
-  break;
-  default:
-    echo "Se ha producido un error durante la búsqueda.";
-}
+// Datos del formulario
+$busqueda = $_POST["ftext"];
+$tipoBusqueda = $_POST["opcion"];
 
-$resultado = mysqli_query($conn, $sql);
+// Creación de nuevo objeto Producto
+$productoExistente = new Producto("prueba","prueba","prueba","prueba");
 
-// Consulta para realizar la busqueda en la base de datos
-if (mysqli_num_rows($resultado) > 0) {
-  // Salida de datos por cada fila
-  while($row = mysqli_fetch_assoc($resultado)) {
-    echo "- Código: ".$row["cod"].", Descripción: ".$row["descripcion"].", Precio: ".$row["precio"].", Stock: ".$row["stock"]."<br>";
-  }
-}else{
-  echo "No se han encontrado resultados.";
-}
+// Búsqueda del Producto en la BBDD
+$productoExistente->buscarProducto($busqueda,$tipoBusqueda,$conn);
 
-mysqli_close($conn);
+// Cierre de la conexión
+$conn->close();
 
 ?>
