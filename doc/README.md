@@ -1,4 +1,4 @@
-Esta es la tienda web V2.0 realizada por los alumnos Daniel Urquiza, Luis Miguel Benitez, Luis Manuel Cortes y Francisco Guzman.
+4Esta es la tienda web V2.0 realizada por los alumnos Daniel Urquiza, Luis Miguel Benitez, Luis Manuel Cortes y Francisco Guzman.
 
 Estamos divididos en dos equipo, uno se encargará del los archivos HTML y otro de los PHP. La creacion y modificación de las tablas de la base de datos ha sido realizada entre
 los 4 miembros del grupo por igual. Daniel y Luismi se encargarán de los HTML, mientras que Fran y Luis Manuel se encargarán de los PHP.
@@ -32,3 +32,12 @@ Para esta versión de la tienda Web nos hemos repartido el trabajo de la siguien
 insertarProducto.php y ha creado la clase Producto, que esta situada en el fichero Productos.php), Dani se ha encargado de modificar los ficheros de Cliente para que se envien
 los correos cada vez que un cliente se da de alta, Luismi y Fran han trabajado en equipo y se han encargado de hacer entre los dos la clase Cliente y su correspondiente insertar
 y buscar. El readme lo ha modificado Luismi y la descripción la ha modificado Fran. El push de los archivos de Cliente lo ha hecho Fran y el de los Productos Luis Manuel.
+
+PHPUNIT
+
+27/02/2021
+El equipo entero se reunió en llamada para discutir cómo enfocar la implementación del PHPUNIT en la tienda web 3.0. Al final, nuestra conclusión fue hacer en el momento el testClassCliente.php para entenderlo de forma correcta
+y volver a reunirnos el día 1 habiendo hecho cada 1 una función del fichero testClassProducto.php. Como tenemos 4 funciones, lógicamente hemos hecho 1 cada uno.
+
+01/03/2021
+El equipo se reune de nuevo, hemos unido todas nuestras funciones y las hemos probado, al ver que funcionan hemos decicido que Daniel haga el push, ya que estábamos probandos los archivos en su máquina.
