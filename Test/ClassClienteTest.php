@@ -34,7 +34,8 @@ $dbname = "pruebas";
         $conn->close();
 
 
-$comando = shell_exec('mysql -u php -p1234 < ./schemaTiendaWeb.sql')
+$comando = shell_exec('mysql -u php -p1234 < ./schemaTiendaWeb.sql');
+
 class ClienteTest extends \PHPUnit\Framework\TestCase
 {
 
@@ -65,7 +66,7 @@ class ClienteTest extends \PHPUnit\Framework\TestCase
         $clientesAntes = $resultado->num_rows;
 
 
-        $clienteNuevo = new Cliente("prueba10", "prueba", "prueba", "5000-02-22", "micorreo@gmail.com");
+        $clienteNuevo = new Cliente("prueba", "prueba", "prueba", "5000-02-22", "micorreo@gmail.com");
 
         $clienteNuevo->darAlta($conn);
 
@@ -98,6 +99,7 @@ class ClienteTest extends \PHPUnit\Framework\TestCase
         $password = "1234";
         $dbname = "pruebas";
 
+
         // Establecer conexión con la base de datos
         $conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -116,7 +118,7 @@ class ClienteTest extends \PHPUnit\Framework\TestCase
 
 
         //lanzo una peticion cliente->buscar("Ped","onom",$conn) que tiene que ser resultado == 1
-        $resultado = $buscador->buscarCliente("Pedro","onom",$conn);
+        $resultado = $buscador->buscarCliente("prueba","onom",$conn);
         $this->assertEquals(null,$resultado,"Hemos buscado a Pedro y no estaba???");
     
     }
@@ -146,7 +148,7 @@ class ClienteTest extends \PHPUnit\Framework\TestCase
 
 
         //lanzo una peticion cliente->buscar("Gonzalez","oape",$conn) que tiene que ser resultado == 1
-        $resultado = $buscador->buscarCliente("Gonzalez","oape",$conn);
+        $resultado = $buscador->buscarCliente("prueba","oape",$conn);
         $this->assertEquals(null,$resultado,"Hemos buscado a Gonzalez y no estaba???");
     }
 }
