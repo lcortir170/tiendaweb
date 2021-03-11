@@ -15,6 +15,26 @@
 require 'vendor/autoload.php';
 require 'clientes.php';
 
+
+$servername = "localhost";
+$username = "php";
+$password = "1234";
+$dbname = "pruebas";
+
+        // Establecer conexión con la base de datos
+        $conn = new mysqli($servername, $username, $password, $dbname);
+
+        // Verificar la conexión
+        if ($conn->connect_error) {
+            die("Error de conexión: " . $conn->connect_error);
+        }
+
+        $sql = "drop database pruebas;";
+
+        $conn->close();
+
+
+$comando = shell_exec('mysql -u php -p1234 < ./schemaTiendaWeb.sql')
 class ClienteTest extends \PHPUnit\Framework\TestCase
 {
 
